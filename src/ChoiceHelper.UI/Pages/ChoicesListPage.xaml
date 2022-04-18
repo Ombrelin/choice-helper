@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChoiceHelper.UI.ChoicesListPage"
+             xmlns:vm="clr-namespace:ChoiceHelper.UI.ViewModels"
+             xmlns:entities="clr-namespace:ChoiceHelper.Core.Domain.Entities;assembly=ChoiceHelper.Core"
+             x:DataType="vm:ChoiceListViewModel"
+             Title="ChoicesListPage">
+    <FlexLayout Direction="Column">
+
+        <ScrollView FlexLayout.Basis="85%">
+        
+        <CollectionView x:Name="choices" ItemsSource="{Binding Choices}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="entities:Choice">
+                    <Label Grid.Column="1"
+                           Margin="20,0"
+                           Text="{Binding Name}"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        </ScrollView>
+        <FlexLayout JustifyContent="Center" AlignItems="Center" FlexLayout.Basis="10%">
+            <Button FlexLayout.Basis="90%" Text="New Choice" StyleClass="Primary"></Button>
+        </FlexLayout>
+       
+    </FlexLayout>
+
+</ContentPage>
