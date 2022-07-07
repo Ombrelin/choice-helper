@@ -1,3 +1,11 @@
-﻿.Primary {
-    background-color: #0077CC;
+﻿.primary-button {
+    background-color: #0066CC;
+}
+
+navigationpage {
+    -maui-bar-background-color: #212121;
+}
+
+^contentpage {
+    background-color: #212121;
 }

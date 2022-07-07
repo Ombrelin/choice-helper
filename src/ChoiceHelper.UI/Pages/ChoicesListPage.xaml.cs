@@ -1,12 +1,13 @@
+using ChoiceHelper.UI.Services;
 using ChoiceHelper.UI.ViewModels;
 
 namespace ChoiceHelper.UI;
 
 public partial class ChoicesListPage : ContentPage
 {
-	public ChoicesListPage(ChoiceListViewModel viewModel)
+	public ChoicesListPage(ChoicesListPage page)
 	{
-		BindingContext = viewModel;
+		BindingContext = new ChoiceListViewModel(new DialogService(page));
 
 		InitializeComponent();
 	}

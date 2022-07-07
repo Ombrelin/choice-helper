@@ -24,7 +24,9 @@
         </CollectionView>
         </ScrollView>
         <FlexLayout JustifyContent="Center" AlignItems="Center" FlexLayout.Basis="10%">
-            <Button FlexLayout.Basis="90%" Text="New Choice" StyleClass="Primary"></Button>
+            <Button FlexLayout.Basis="90%" Text="New Choice" StyleClass="primary-button"></Button>
+            <Button FlexLayout.Basis="90%" Text="New Choice" ></Button>
+            <Entry FlexLayout.Basis="90%" Text="New Choice"></Entry>
         </FlexLayout>
        
     </FlexLayout>
